@@ -1,0 +1,103 @@
+# # 1
+# def counter():
+#     count = 0
+#     def inner():
+#         nonlocal count
+#         count += 1
+#         return count
+#     return inner
+
+# counter_func = counter()
+# print(counter_func())  
+# print(counter_func())  
+# # 2
+# def larger_than(threshold):
+#     def inner(values):
+#         return [value for value in values if value > threshold]
+#     return inner
+
+# five = larger_than(5)
+# one = larger_than(1)
+
+# print(five([2, 4, 6, 1, 8]))  
+# print(one([1, 0, 8]))         
+# #3
+# def math_operations(number, operation):
+#     def inner(other_number):
+#         if operation == "add":
+#             return number + other_number
+#         elif operation == "subtract":
+#             return number - other_number
+#         elif operation == "multiply":
+#             return number * other_number
+#         elif operation == "divide":
+#             return number / other_number
+#         else:
+#             return "Invalid operation"
+#     return inner
+
+# addition = math_operations(10, "add")
+# subtraction = math_operations(10, "subtract")
+# multiplication = math_operations(10, "multiply")
+# division = math_operations(10, "divide")
+
+# print(addition(5))        
+# print(subtraction(5))    
+# print(multiplication(5))  
+# print(division(5))  
+# #4       
+# def even_odd_numbers():
+#     def juft(sonlar):
+#         return [son for son in sonlar if son % 2 == 0]
+
+#     def toq(sonlar):
+#         return [son for son in sonlar if son % 2 != 0]
+
+#     return juft, toq
+
+# juft, toq = even_odd_numbers()
+
+# print(juft([2, 3, 8])) 
+# print(toq([2, 3, 8]))   
+# #5
+# def palindrom_checker():
+#     def is_palindrome(n):
+#         return str(n) == str(n)[::-1]
+
+#     def palindrom_sonlar(sonlar):
+#         return [son for son in sonlar if is_palindrome(son)]
+
+#     def non_palindrom_sonlar(sonlar):
+#         return [son for son in sonlar if not is_palindrome(son)]
+
+#     return palindrom_sonlar, non_palindrom_sonlar
+
+# palindrom_sonlar, non_palindrom_sonlar = palindrom_checker()
+
+# print(palindrom_sonlar([121, 1331, 123, 454]))      
+# print(non_palindrom_sonlar([121, 1331, 123, 454]))  
+# # 6
+# def tub_va_murakkab_bolmagan():
+#     def is_prime(num):
+#         if num <= 1:
+#             return False
+#         for i in range(2, int(num ** 0.5) + 1):
+#             if num % i == 0:
+#                 return False
+#         return True
+
+#     def filter_numbers(numbers):
+#         tub_sonlar = [num for num in numbers if is_prime(num)]
+#         murakkab_bolmagan_sonlar = [num for num in numbers if num == 1 or is_prime(num)]
+#         return tub_sonlar, murakkab_bolmagan_sonlar
+
+#     return filter_numbers
+
+
+# filter_func = tub_va_murakkab_bolmagan()
+
+
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# tub_sonlar, murakkab_bolmagan_sonlar = filter_func(numbers)
+# print("Tub sonlar:", tub_sonlar)
+# print("Murakkab bo'lmagan sonlar:", murakkab_bolmagan_sonlar)
